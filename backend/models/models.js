@@ -1,12 +1,13 @@
 const uuid = require('uuid')
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+var ObjectId = require('mongodb').ObjectId;
 
 // collection for org
 const orgDataSchema = new Schema(
   {
     _id: {
-      type: String,
+      type: ObjectId,
       required: true
     },
     name: {
@@ -16,7 +17,7 @@ const orgDataSchema = new Schema(
   },
   {
     collection: 'org'
-  }
+  },
 )
 
 // collection for clients
