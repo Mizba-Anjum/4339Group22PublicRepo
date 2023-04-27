@@ -10,12 +10,18 @@ require('dotenv').config(); //require the dotenv
 const app = express()
 
 // add cors header to the server
-app.use(cors({
-  origin: 'https://green-forest-0fdc36110.3.azurestaticapps.net',
-  methods: 'GET,PUT,POST,DELETE',
-  preflightContinue: false,
-  optionsSuccessStatus: 204
-}));
+app.use(function (err, req, res, next) {
+  // add CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+
+  // logs error and error code to console
+  console.error(err.message, req)
+  if (!err.statusCode) {
+    err.statusCode = 500
+  }
+  res.status(err.statusCode).send(err.message)
+})
 
 
 // sets up mongoose for the mongoDB connection
