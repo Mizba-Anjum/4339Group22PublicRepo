@@ -12,7 +12,7 @@ const app = express()
 // add cors header to the server
 app.use(
   cors({
-    origin: '*'
+    origin: '*', secure: true, credentials: true
   }),
   function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
