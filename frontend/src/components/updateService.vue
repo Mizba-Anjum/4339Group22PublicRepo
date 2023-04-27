@@ -40,9 +40,6 @@ export default {
         this.$router.back()
       })
     },
-    editEvent(eventID) {
-      this.$router.push({ name: 'eventdetails', params: { id: eventID } })
-    },
     serviceDelete() {
       axios.delete(`${apiURL}/services/${this.$route.params.id}`).then(() => {
         alert('Service has been deleted.')

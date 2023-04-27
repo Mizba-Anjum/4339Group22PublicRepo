@@ -5,6 +5,9 @@ This implementation is for NodeJS based on [Express](https://expressjs.com/) and
 ## Project setup
 
     npm install
+    npm install nodemon
+    npm install axios
+    npm install mongoose
 
 ### Before startup
 You need a MongoDB database ready.
@@ -13,9 +16,9 @@ Make sure you have a collection named 'org' in your database that contains at le
 
 Setup a .env file with the following variables: MONGO_URL, PORT and ORG
 
-    MONGO_URL= that is the Mongo URL connection string
-    PORT= e.g.3000
-    ORG= that is the orgid (as a string)
+    MONGO_URL=mongodb+srv://4339group22:lindner@4339group22cluster.oxqlqta.mongodb.net/DataPlatformProject
+    PORT=3000
+    ORG="6439c6736be20c13801a39a1"
 
 ### Compiles and hot-reloads for development
 
@@ -23,4 +26,4 @@ Setup a .env file with the following variables: MONGO_URL, PORT and ORG
 
 ## Postman Documentation
 
-Can be found at <https://documenter.getpostman.com/view/23133138/2s83mdJiqh>
+Can be found at <https://documenter.getpostman.com/view/27053458/2s93Y5PKmf>

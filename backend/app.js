@@ -16,7 +16,6 @@ app.use(
   })
 )
 
-
 // sets up mongoose for the mongoDB connection
 mongoose
   .connect(process.env.MONGO_URL)

@@ -21,3 +21,6 @@ VITE_ROOT_API is the URL for the backend API, either on localhost or in the clou
 ### Compiles and hot-reloads for development
 
     npm run dev
+
+## API Documentation
+Can be found at https://documenter.getpostman.com/view/27053458/2s93Y5PKmf

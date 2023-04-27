@@ -7,8 +7,8 @@ export default {
   name: 'App',
   data() {
     return {
-      // Changed orgName from Dataplatform to Group 22.
-      orgName: 'Group 22'
+      // Changed orgName from Dataplatform to org name
+      orgName: ''
     }
   },
   setup() {
