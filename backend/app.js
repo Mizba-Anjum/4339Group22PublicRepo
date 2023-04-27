@@ -11,11 +11,12 @@ const app = express()
 
 // add cors header to the server
 app.use(cors({
-  origin: '*',
+  origin: 'https://green-forest-0fdc36110.3.azurestaticapps.net',
   methods: 'GET,PUT,POST,DELETE',
   preflightContinue: false,
   optionsSuccessStatus: 204
 }));
+
 
 // sets up mongoose for the mongoDB connection
 mongoose
