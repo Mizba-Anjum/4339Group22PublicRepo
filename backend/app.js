@@ -10,17 +10,12 @@ require('dotenv').config(); //require the dotenv
 const app = express()
 
 // add cors header to the server
-app.use(
-  cors({
-    origin: '*', secure: true, credentials: true
-  }),
-  function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    next();
-  }
-);
+app.use(cors({
+  origin: '*',
+  methods: 'GET,PUT,POST,DELETE',
+  preflightContinue: false,
+  optionsSuccessStatus: 204
+}));
 
 // sets up mongoose for the mongoDB connection
 mongoose
