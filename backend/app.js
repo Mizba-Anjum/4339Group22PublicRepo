@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: '*'
   })
-})
+)
 
 
 // sets up mongoose for the mongoDB connection
