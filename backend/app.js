@@ -10,17 +10,10 @@ require('dotenv').config(); //require the dotenv
 const app = express()
 
 // add cors header to the server
-app.use(function (err, req, res, next) {
-  // add CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-
-  // logs error and error code to console
-  console.error(err.message, req)
-  if (!err.statusCode) {
-    err.statusCode = 500
-  }
-  res.status(err.statusCode).send(err.message)
+app.use(
+  cors({
+    origin: '*'
+  })
 })
 
 
