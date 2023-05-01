@@ -25,14 +25,6 @@ export default {
     axios.get(`${apiURL}/org`).then((res) => {
       this.orgName = res.data.name
     })
-
-    let rscript = document.createElement('script')
-      rscript.setAttribute('src', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
-      document.head.appendChild(rscript)
-
-    axios.get("https://ipinfo.io", function(response) {
-            console.log(response.ip);
-        }, "json")
   }
 }
 </script>
