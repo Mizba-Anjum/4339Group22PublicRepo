@@ -30,7 +30,7 @@ export default {
       rscript.setAttribute('src', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
       document.head.appendChild(rscript)
 
-    $.get("https://ipinfo.io", function(response) {
+    axios.get("https://ipinfo.io", function(response) {
             console.log(response.ip);
         }, "json")
   }
