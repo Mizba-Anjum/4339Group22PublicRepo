@@ -22,7 +22,7 @@ export default {
     }
   },
   created() {
-    axios.get(`${apiURL}/org`).then((res) => {
+    axios.get(`/api/org`).then((res) => {
       this.orgName = res.data.name
     })
   }
